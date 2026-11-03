@@ -1,0 +1,6 @@
+shuffleblame: github.com/spf13/viper, 89 tests
+Orders: source order and shuffle seeds 1-10 (searched)
+Skipped, so not checked: 1 test (TestWatchFile)
+
+Every test that ran passed in all 11 orders.
+That covers only these orders. A test that fails in another order can still exist.

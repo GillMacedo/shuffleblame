@@ -1,0 +1,9 @@
+ok  	example.com/shop/ledger	0.001s
+-test.shuffle 4
+--- FAIL: TestRatesStartEmpty (0.00s)
+    pricing_test.go:19: CachedRates() = 1, want 0
+--- FAIL: TestFormatDefault (0.00s)
+    pricing_test.go:7: Format(1999, "") = "19.99 EUR", want "19.99 USD"
+FAIL
+FAIL	example.com/shop/pricing	0.002s
+FAIL

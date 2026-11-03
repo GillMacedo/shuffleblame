@@ -1,0 +1,8 @@
+{"ImportPath":"example.com/shop/pricing [example.com/shop/pricing.test]","Action":"build-output","Output":"# example.com/shop/pricing [example.com/shop/pricing.test]\n"}
+{"ImportPath":"example.com/shop/pricing [example.com/shop/pricing.test]","Action":"build-output","Output":"pricing/pricing.go:41:24: too many return values\n"}
+{"ImportPath":"example.com/shop/pricing [example.com/shop/pricing.test]","Action":"build-output","Output":"\thave (number)\n"}
+{"ImportPath":"example.com/shop/pricing [example.com/shop/pricing.test]","Action":"build-output","Output":"\twant ()\n"}
+{"ImportPath":"example.com/shop/pricing [example.com/shop/pricing.test]","Action":"build-fail"}
+{"Time":"2026-11-03T11:20:02.694764803Z","Action":"start","Package":"example.com/shop/pricing"}
+{"Time":"2026-11-03T11:20:02.694800261Z","Action":"output","Package":"example.com/shop/pricing","Output":"FAIL\texample.com/shop/pricing [build failed]\n","OutputType":"frame"}
+{"Time":"2026-11-03T11:20:02.694806761Z","Action":"fail","Package":"example.com/shop/pricing","Elapsed":0,"FailedBuild":"example.com/shop/pricing [example.com/shop/pricing.test]"}

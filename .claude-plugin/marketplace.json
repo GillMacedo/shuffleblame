@@ -1,0 +1,14 @@
+{
+  "name": "shuffleblame-marketplace",
+  "description": "Marketplace for shuffleblame, which finds the Go test that makes another test fail under go test -shuffle.",
+  "owner": {
+    "name": "Giulliano Macedo"
+  },
+  "plugins": [
+    {
+      "name": "shuffleblame",
+      "source": "./plugin",
+      "description": "Find which earlier Go test pollutes another under -shuffle or in CI, with a two-test reproduce command."
+    }
+  ]
+}

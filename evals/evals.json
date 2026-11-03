@@ -1,0 +1,37 @@
+[
+  {
+    "skills": ["finding-order-dependent-go-tests"],
+    "query": "TestFormatDefault in ./pricing passes when I run it alone but fails in CI with -shuffle=on. Here's the CI log in ci.log. Which test breaks it?",
+    "expected_behavior": [
+      "Runs shuffleblame.go with -log ci.log on ./pricing",
+      "Names the culprit test and its file and line, and explains the shared state it changes without restoring",
+      "Gives the two-test reproduce command and suggests restoring the state with t.Cleanup, without editing code unless asked"
+    ]
+  },
+  {
+    "skills": ["finding-order-dependent-go-tests"],
+    "query": "Do any tests in ./internal/cache depend on the order they run in? We want to turn on -shuffle in CI.",
+    "expected_behavior": [
+      "Runs shuffleblame.go in search mode on ./internal/cache",
+      "If the search is quiet, says which orders were tried and that this doesn't rule out other orders",
+      "If tests fail, lists each culprit and how to fix it before enabling -shuffle"
+    ]
+  },
+  {
+    "skills": ["finding-order-dependent-go-tests"],
+    "query": "shuffleblame exited 2 and said the log ends partway through a package's output. Can I ignore that?",
+    "expected_behavior": [
+      "Explains that the log is cut off, so the seed or failing tests may be missing",
+      "Asks for the full log, or suggests running with -seed or in search mode instead",
+      "Doesn't present the run as finding no order dependence"
+    ]
+  },
+  {
+    "skills": ["finding-order-dependent-go-tests"],
+    "query": "TestImport is flaky in ./store, sometimes it fails, sometimes not. Is another test causing it?",
+    "expected_behavior": [
+      "Runs shuffleblame.go on ./store, with -test TestImport",
+      "Reports whether it fails alone, after a culprit, or didn't reproduce, and doesn't blame a test when the tool doesn't"
+    ]
+  }
+]

@@ -1,0 +1,33 @@
+shuffleblame: github.com/urfave/cli/v3, 636 tests
+Orders: source order and shuffle seeds 1-10 (searched)
+Skipped, so not checked: 2 tests (TestCommand_BeforeAfterFuncShellCompletion, TestFlagValue)
+
+TestHandleExitCoder_Default fails after TestHandleExitCoder_MultiErrorWithFormat (shuffle seed 2)
+  alone: passed 3 of 3 runs
+  after TestHandleExitCoder_MultiErrorWithFormat: failed 3 of 3 runs
+  TestHandleExitCoder_MultiErrorWithFormat is at errors_test.go:249
+  TestHandleExitCoder_Default is at command_test.go:3664
+  failure:
+    command_test.go:3669:
+    Error Trace:	/tmp/real/cli/command_test.go:3669
+    Error:      	"" does not contain "Default"
+    Test:       	TestHandleExitCoder_Default
+    Messages:   	Expected Default Behavior from Error Handler
+  reproduce:
+    go test -count=1 -run '^(TestHandleExitCoder_MultiErrorWithFormat|TestHandleExitCoder_Default)$' -shuffle=2 .
+
+TestHandleExitCoder_Custom fails after TestHandleExitCoder_MultiErrorWithFormat (shuffle seed 2)
+  alone: passed 3 of 3 runs
+  after TestHandleExitCoder_MultiErrorWithFormat: failed 3 of 3 runs
+  TestHandleExitCoder_MultiErrorWithFormat is at errors_test.go:249
+  TestHandleExitCoder_Custom is at command_test.go:3672
+  failure:
+    command_test.go:3682:
+    Error Trace:	/tmp/real/cli/command_test.go:3682
+    Error:      	"" does not contain "Custom"
+    Test:       	TestHandleExitCoder_Custom
+    Messages:   	Expected Custom Behavior from Error Handler
+  reproduce:
+    go test -count=1 -run '^(TestHandleExitCoder_MultiErrorWithFormat|TestHandleExitCoder_Custom)$' -shuffle=2 .
+
+2 tests fail because of earlier tests. 52 test binary runs.

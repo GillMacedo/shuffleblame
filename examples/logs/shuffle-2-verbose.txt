@@ -1,0 +1,17 @@
+-test.shuffle 2
+=== RUN   TestRatesStartEmpty
+--- PASS: TestRatesStartEmpty (0.00s)
+=== RUN   TestCacheRate
+--- PASS: TestCacheRate (0.00s)
+=== RUN   TestEuroStore
+--- PASS: TestEuroStore (0.00s)
+=== RUN   TestFormatDefault
+    pricing_test.go:7: Format(1999, "") = "19.99 EUR", want "19.99 USD"
+--- FAIL: TestFormatDefault (0.00s)
+=== RUN   TestLargeAmounts
+--- PASS: TestLargeAmounts (0.00s)
+=== RUN   TestFormatExplicit
+--- PASS: TestFormatExplicit (0.00s)
+FAIL
+FAIL	example.com/shop/pricing	0.011s
+FAIL

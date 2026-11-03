@@ -1,0 +1,3 @@
+setup: can't reach the rate service
+FAIL	example.com/shop/pricing	0.001s
+FAIL

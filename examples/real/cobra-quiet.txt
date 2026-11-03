@@ -1,0 +1,5 @@
+shuffleblame: github.com/spf13/cobra, 260 tests
+Orders: source order and shuffle seeds 1-10 (searched)
+
+Every test passed in all 11 orders.
+That covers only these orders. A test that fails in another order can still exist.

@@ -1,0 +1,6 @@
+# example.com/shop/pricing [example.com/shop/pricing.test]
+pricing/pricing.go:41:24: too many return values
+	have (number)
+	want ()
+FAIL	example.com/shop/pricing [build failed]
+FAIL

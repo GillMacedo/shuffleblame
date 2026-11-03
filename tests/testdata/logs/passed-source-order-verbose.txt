@@ -1,0 +1,14 @@
+=== RUN   TestFormatDefault
+--- PASS: TestFormatDefault (0.00s)
+=== RUN   TestFormatExplicit
+--- PASS: TestFormatExplicit (0.00s)
+=== RUN   TestRatesStartEmpty
+--- PASS: TestRatesStartEmpty (0.00s)
+=== RUN   TestEuroStore
+--- PASS: TestEuroStore (0.00s)
+=== RUN   TestCacheRate
+--- PASS: TestCacheRate (0.00s)
+=== RUN   TestLargeAmounts
+--- PASS: TestLargeAmounts (0.00s)
+PASS
+ok  	example.com/shop/pricing	0.001s

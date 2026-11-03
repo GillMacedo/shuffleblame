@@ -1,0 +1,4 @@
+{"Time":"2026-11-03T11:20:02.903929428Z","Action":"start","Package":"example.com/shop/pricing"}
+{"Time":"2026-11-03T11:20:02.905280636Z","Action":"output","Package":"example.com/shop/pricing","Output":"setup: can't reach the rate service\n"}
+{"Time":"2026-11-03T11:20:02.905399928Z","Action":"output","Package":"example.com/shop/pricing","Output":"FAIL\texample.com/shop/pricing\t0.001s\n","OutputType":"frame"}
+{"Time":"2026-11-03T11:20:02.905409636Z","Action":"fail","Package":"example.com/shop/pricing","Elapsed":0.001}

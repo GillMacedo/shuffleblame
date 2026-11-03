@@ -1,0 +1,30 @@
+shuffleblame: github.com/spf13/pflag, 193 tests
+Orders: source order and shuffle seeds 1-10 (searched)
+
+TestBoolP fails after TestIgnoreUnknownFlagsBackwardsCompat (shuffle seed 1)
+  alone: passed 3 of 3 runs
+  after TestIgnoreUnknownFlagsBackwardsCompat: failed 3 of 3 runs
+  TestIgnoreUnknownFlagsBackwardsCompat is at flag_test.go:821
+  TestBoolP is at bool_test.go:194
+  It also fails when it runs twice in a row (-count=2), so it leaves state behind itself
+  reproduce:
+    go test -count=1 -run '^(TestIgnoreUnknownFlagsBackwardsCompat|TestBoolP)$' -shuffle=1 .
+
+TestEverything fails after TestIgnoreUnknownFlags (shuffle seed 2)
+  alone: passed 3 of 3 runs
+  after TestIgnoreUnknownFlags: failed 3 of 3 runs
+  TestIgnoreUnknownFlags is at flag_test.go:816
+  TestEverything is at flag_test.go:43
+  It also fails when it runs twice in a row (-count=2), so it leaves state behind itself
+  failure:
+    flag_test.go:65: VisitAll misses some flags
+    flag_test.go:80: no such flag -test_bool
+    flag_test.go:83: no such flag -test_int
+    flag_test.go:86: no such flag -test_int64
+    flag_test.go:89: no such flag -test_uint
+    flag_test.go:92: no such flag -test_uint64
+    ...
+  reproduce:
+    go test -count=1 -run '^(TestIgnoreUnknownFlags|TestEverything)$' -shuffle=2 .
+
+2 tests fail because of earlier tests. 42 test binary runs.
